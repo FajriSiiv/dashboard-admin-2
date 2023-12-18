@@ -46,10 +46,7 @@ const OverBarChart = () => {
           <BarChart data={dataBar} barSize={45}>
             <Bar
               dataKey="Money"
-              fill="#8884d8"
-              style={{
-                borderRadius: 10,
-              }}
+              className="fill-secondary-foreground dark:fill-primary"
               shape={<CustomBar />}
             />
             <XAxis dataKey="name" axisLine={false} tickLine={false} />

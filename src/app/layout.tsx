@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/navbar";
 import Sidebar from "@/components/layout/sidebar";
+import { ThemeProvider } from "@/components/theme";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import { Suspense } from "react";
@@ -24,9 +25,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="h-screen max-h-[900px] p-8">
-          <Suspense fallback={<Loading />}>{children}</Suspense>
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="h-screen max-h-[900px] p-8">
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

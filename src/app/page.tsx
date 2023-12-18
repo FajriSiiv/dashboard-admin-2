@@ -1,18 +1,22 @@
 import NavTabs from "@/components/NavTabs";
 import Overview from "@/components/overview";
+import { TableCustomer } from "@/components/table/tableCust";
+import { ModeToggle } from "@/components/toggleDarkMode";
 import { TabsContent } from "@/components/ui/tabs";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
-      <h1 className="text-3xl font-semibold mb-5">Dashboard</h1>
+      <div className="flex justify-between items-center">
+        <h1 className="text-3xl font-semibold mb-5">Dashboard</h1>
+        <ModeToggle />
+      </div>
       <NavTabs>
         <TabsContent value="1">
           <Overview />
         </TabsContent>
         <TabsContent value="2">
-          <h1>Tab accc 2</h1>
+          <TableCustomer />
         </TabsContent>
       </NavTabs>
     </main>
