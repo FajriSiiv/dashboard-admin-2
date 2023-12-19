@@ -59,8 +59,9 @@ const Overview = () => {
   return (
     <div className="w-full py-5">
       <div className="grid grid-cols-4 w-full gap-4">
-        {dataCardVen.slice(0, 4).map((cardVen: cardVenue) => (
+        {dataCardVen.slice(0, 4).map((cardVen: cardVenue, index: any) => (
           <CardVeneu
+            key={index}
             name={cardVen.name}
             symbol={cardVen.symbol}
             stats={cardVen.stats}

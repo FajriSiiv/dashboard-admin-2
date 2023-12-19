@@ -10,8 +10,9 @@ const HistoryPayment = () => {
       <CardHeader>
         <CardTitle className="text-lg pb-2">Recent Payment</CardTitle>
         <CardContent className="p-0 flex flex-col gap-y-5">
-          {userData.map((card: userCard) => (
+          {userData.map((card: userCard, index: any) => (
             <CardRecentPayment
+              key={index}
               name={card.name}
               email={card.name.toLowerCase().replace(/\s/g, "") + `@gmail.com`}
               money={card.money}
