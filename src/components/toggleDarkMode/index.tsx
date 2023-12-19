@@ -16,13 +16,17 @@ export function ModeToggle() {
 
   const toggleSet = () => {
     if (themeVal === "dark") {
-      setTheme("light");
       setThemeVal("light");
+      setTheme(themeVal);
     } else {
-      setTheme("dark");
+      setTheme(themeVal);
       setThemeVal("dark");
     }
   };
+
+  React.useEffect(() => {
+    toggleSet();
+  }, []);
 
   return (
     <DropdownMenu>

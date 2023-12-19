@@ -1,5 +1,6 @@
 import NavTabs from "@/components/NavTabs";
 import Overview from "@/components/overview";
+import Sales from "@/components/sales";
 import { TableCustomer } from "@/components/table/tableCust";
 import { ModeToggle } from "@/components/toggleDarkMode";
 import { TabsContent } from "@/components/ui/tabs";
@@ -17,6 +18,9 @@ export default function Home() {
         </TabsContent>
         <TabsContent value="2">
           <TableCustomer />
+        </TabsContent>
+        <TabsContent value="3">
+          <Sales />
         </TabsContent>
       </NavTabs>
     </main>
